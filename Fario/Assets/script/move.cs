@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class move : MonoBehaviour
@@ -33,27 +32,38 @@ public class move : MonoBehaviour
         MoveLeftRight();
         Animate();
         Move();
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, CheckRadius, groundObjects);
+
+        if (isGrounded)
+        {
+            jumpCount = maxJumpCount;
+        }
+
+
     }
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, CheckRadius, groundObjects);
-        {
-            if (isGrounded)
-            {
-                jumpCount = maxJumpCount;
-            }
-        }
+
+        Jumping();
         Move();
     }
     private void Move()
     {
+
+        //when you mouse over velocity you should have items pop up that tells you what it is asking for 
+
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
+        
+        
+    }
+    private void Jumping()
+    {
         if (isJumping)
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             jumpCount--;
+            isJumping = false;
         }
-        isJumping = false;
     }
 
     private void Animate()
