@@ -14,7 +14,7 @@ public class BossBehavior : MonoBehaviour
     public bool isDead = false;
     public Transform player;
     public bool isFlipped = false;
-    PlayerManager playerManager;
+    PlayerManager1 playerManager;
 
     //create a shot location as a reference
     public Transform shotLocation;

@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager1 : MonoBehaviour
 {
     //declare and set a variable for health
     public int maxHealth = 5;
     public int currentHealth;
     public GameObject myPlayer;
-    PlayerMovement1 playerMovement;
+    move playerMovement;
     public int coinCount;
 
     private void Awake()
     {
         currentHealth = 3;
-        playerMovement = GetComponent<PlayerMovement1>();
+        playerMovement = GetComponent<move>();
     }
     private void Update()
     {
@@ -32,8 +32,8 @@ public class PlayerManager : MonoBehaviour
                 coinCount++;
                 return true;
             case "Speed+":
-                playerMovement.SpeedPowerUp();
-                return true;
+               // playerMovement.SpeedPowerUp();
+                return false;
             default:
                 return false;
         }
