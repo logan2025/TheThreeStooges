@@ -184,18 +184,30 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.sysroot": {
+<<<<<<< Updated upstream
       "version": "2.0.5",
+=======
+      "version": "2.0.6",
+>>>>>>> Stashed changes
       "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.sysroot.linux-x86_64": {
+<<<<<<< Updated upstream
       "version": "2.0.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.sysroot": "2.0.5"
+=======
+      "version": "2.0.5",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "2.0.6"
+>>>>>>> Stashed changes
       },
       "url": "https://packages.unity.com"
     },
@@ -232,12 +244,21 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.toolchain.win-x86_64-linux-x86_64": {
+<<<<<<< Updated upstream
       "version": "2.0.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.sysroot": "2.0.5",
         "com.unity.sysroot.linux-x86_64": "2.0.4"
+=======
+      "version": "2.0.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "2.0.6",
+        "com.unity.sysroot.linux-x86_64": "2.0.5"
+>>>>>>> Stashed changes
       },
       "url": "https://packages.unity.com"
     },
